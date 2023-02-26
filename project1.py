@@ -1,9 +1,9 @@
 import math
 
 # user inputs
-wall_height = float(input("Enter height:"))
-wall_width = float(input("Enter width:"))
-paint_cost = float(input("Enter cost of 1 paint can:"))
+wall_height = float(input("Enter height: "))
+wall_width = float(input("Enter width: "))
+paint_cost = float(input("Enter cost of 1 paint can: "))
 
 # calculations
 wall_area = round(wall_height * wall_width, 2)
