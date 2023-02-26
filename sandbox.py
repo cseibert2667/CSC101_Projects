@@ -33,12 +33,27 @@ def even_or_odd():
             print(str(number) + " is odd")
 
 # finds average of any numerical list, rounded to any specified number of digits
-def find_average(nums, x):
+def find_average(nums, digits):
     sum = 0
     count = 0
     for num in nums:
         sum = sum + num
         count += 1
-    print(round(sum / count, x))
+    print(round(sum / count, digits))
 
-find_average(numbers, 3)
+# basic single-operation calculator
+def calculator():
+    num1 = int(input("Enter number: "))
+    sign = input("Enter +, -, *, or /: ")
+    num2 = int(input("Enter number: "))
+    if sign == "+":
+        result = num1 + num2
+    elif sign == "-":
+        result = num1 - num2
+    elif sign == "*":
+        result = num1 * num2
+    elif sign == "/":
+        result = num1 / num2
+    print(result)
+
+calculator()
