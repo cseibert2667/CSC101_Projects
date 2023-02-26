@@ -1,6 +1,7 @@
-sieve = [True]*101
-for i in range(2,100):
-    if sieve [i]:
-        print(i)
-        for j in range(i*i, 100, i):
-            sieve[j] = False
+wall_height = input("Enter height:")
+wall_width = input("Enter width:")
+paint_cost = input("Enter cost of paint:")
+wall_area = int(wall_height) * int(wall_width)
+
+
+print(wall_area)
