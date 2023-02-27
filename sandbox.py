@@ -64,4 +64,14 @@ def indent_text():
             print(" ", end="")
         print(i)
 
-indent_text()
+# nested loop 2 - electric boogaloo (aka rows & columns)
+def rows_columns():
+    num_rows = int(input("Enter number of rows: "))
+    num_cols = int(input("Enter number of columns: "))
+    for i in range(num_rows):
+        col_letter = 'A'
+        for j in range(num_cols):
+            print(str(i + 1) + str(col_letter))
+            col_letter = chr(ord(col_letter) + 1)
+
+rows_columns()
