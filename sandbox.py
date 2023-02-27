@@ -56,4 +56,12 @@ def calculator():
         result = num1 / num2
     print(result)
 
-calculator()
+# nested loop -- indent text by relative number of spaces
+def indent_text():
+    userNum = int(input("Enter number: "))
+    for i in range(userNum + 1):
+        for j in range(i):
+            print(" ", end="")
+        print(i)
+
+indent_text()
