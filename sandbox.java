@@ -2,29 +2,25 @@ import java.util.Scanner;
 
 public class sandbox {
    public static void main(String[] args) {
-      try (Scanner scnr = new Scanner(System.in)) {
-      String simonPattern;
-      String userPattern;
-      int userScore;
-      int i;
+      Scanner scnr = new Scanner(System.in);
+      String userString = scnr.nextLine();
+      char userChar = userString.charAt(0);
+      int numReps = 0;
 
-      userScore = 0;
-
-      simonPattern = "RRGBRYYBGY";
-      userPattern  = "RRGBRYBBGY";
-
-      for (i = 0; i < simonPattern.length(); i++){
-         if (simonPattern.charAt(i) == userPattern.charAt(i)){
-            userScore++;
-         }
-         else {
-            break;
+      for (int i = 1; i < userString.length(); i++){
+         if (userString.charAt(i) == userChar) {
+            numReps++;
          }
       }
+      
+      if (numReps == 1) {
+         System.out.println(numReps + " " + userChar);
+      }
+      else {
+         System.out.println(numReps + " " + userChar + "'s");
+      }
+      
+      //System.out.println(numReps);
 
-      System.out.println("userScore: " + userScore);
-
-      return;
-   }
    }
 }
