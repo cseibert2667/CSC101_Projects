@@ -3,20 +3,27 @@ import java.util.Scanner;
 public class sandbox {
    public static void main(String[] args) {
       Scanner scnr = new Scanner(System.in);
-      int stop;
-      int result;
-      int n;
-      
-      stop = scnr.nextInt();
-      result = 0;
-      
-      for (n = 0; n < 10; ++n) {
-         result += n + 3;
-         if (result > stop) {
-            System.out.println("n=" + n);
+      String simonPattern;
+      String userPattern;
+      int userScore;
+      int i;
+
+      userScore = 0;
+
+      simonPattern = "RRGBRYYBGY";
+      userPattern  = "RRGBRYBBGY";
+
+      for (i = 0; i < simonPattern.length(); i++){
+         if (simonPattern.charAt(i) == userPattern.charAt(i)){
+            userScore++;
+         }
+         else {
             break;
          }
-         System.out.println(result);
       }
+
+      System.out.println("userScore: " + userScore);
+
+      return;
    }
 }
