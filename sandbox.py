@@ -74,3 +74,16 @@ def rows_columns():
             print(str(i + 1) + str(col_letter))
             col_letter = chr(ord(col_letter) + 1)
 
+def count_characters():
+    user_char = input("Enter a character: ")
+    user_string = input("Enter a phrase: ")
+    num_reps = 0
+    for letter in user_string:
+        if letter == user_char:
+            num_reps += 1
+    if num_reps == 1:
+        print(str(num_reps) + " " + str(user_char))
+    else:
+        print(str(num_reps) + " " + str(user_char) + "'s")
+
+count_characters()
