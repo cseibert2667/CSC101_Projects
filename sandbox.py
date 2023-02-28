@@ -64,7 +64,7 @@ def indent_text():
             print(" ", end="")
         print(i)
 
-# nested loop 2 - electric boogaloo (aka rows & columns)
+# nested loop 2 - electric boogaloo (rows & columns)
 def rows_columns():
     num_rows = int(input("Enter number of rows: "))
     num_cols = int(input("Enter number of columns: "))
@@ -74,4 +74,3 @@ def rows_columns():
             print(str(i + 1) + str(col_letter))
             col_letter = chr(ord(col_letter) + 1)
 
-rows_columns()

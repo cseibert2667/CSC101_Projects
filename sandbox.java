@@ -2,25 +2,21 @@ import java.util.Scanner;
 
 public class sandbox {
    public static void main(String[] args) {
-      try (Scanner scnr = new Scanner(System.in)) {
-         int n;
-         int i;
-  
-         System.out.println("Enter an integer:");
-         n = scnr.nextInt();
-  
-         System.out.print("Sequence: ");
-         if (n % 2 != 0) {
-            n--;
+      Scanner scnr = new Scanner(System.in);
+      int stop;
+      int result;
+      int n;
+      
+      stop = scnr.nextInt();
+      result = 0;
+      
+      for (n = 0; n < 10; ++n) {
+         result += n + 3;
+         if (result > stop) {
+            System.out.println("n=" + n);
+            break;
          }
-         if (n < 0) {
-            System.out.println("0 ");
-         } else {
-         for (i = n; i >= 0; i -= 2) {
-            System.out.print(i + " ");
-         }
-         System.out.println();
-         }
+         System.out.println(result);
       }
    }
 }
