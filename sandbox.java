@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class sandbox {
    public static void main(String[] args) {
-      Scanner scnr = new Scanner(System.in);
+      try (Scanner scnr = new Scanner(System.in)) {
       String simonPattern;
       String userPattern;
       int userScore;
@@ -25,5 +25,6 @@ public class sandbox {
       System.out.println("userScore: " + userScore);
 
       return;
+   }
    }
 }
