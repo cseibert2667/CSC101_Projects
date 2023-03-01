@@ -5,13 +5,14 @@ public class sandbox {
       try (Scanner scnr = new Scanner(System.in)) {
 
          String userString = scnr.nextLine();
+         String newString = "";
 
          for (int i = 0; i < userString.length(); i++) {
             char currentChar = userString.charAt(i);
-            if (!Character.isLetter(currentChar)) {
-               userString = userString.replace(currentChar,'\0');
+            if (Character.isLetter(currentChar)) {
+               newString += userString.substring(i, i+1);
             }
-            System.out.println(userString);
+            System.out.println(newString); //print every iteration
          }
 
       }
