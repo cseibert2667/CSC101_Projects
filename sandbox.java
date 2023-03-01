@@ -2,25 +2,19 @@ import java.util.Scanner;
 
 public class sandbox {
    public static void main(String[] args) {
-      Scanner scnr = new Scanner(System.in);
-      String userString = scnr.nextLine();
-      char userChar = userString.charAt(0);
-      int numReps = 0;
+      try (Scanner scnr = new Scanner(System.in)) {
 
-      for (int i = 1; i < userString.length(); i++){
-         if (userString.charAt(i) == userChar) {
-            numReps++;
+         String userString = scnr.nextLine();
+
+         for (int i = 0; i < userString.length(); i++) {
+            char currentChar = userString.charAt(i);
+            if (!Character.isLetter(currentChar)) {
+               userString = userString.replace(currentChar,'\0');
+            }
+            System.out.println(userString);
          }
-      }
-      
-      if (numReps == 1) {
-         System.out.println(numReps + " " + userChar);
-      }
-      else {
-         System.out.println(numReps + " " + userChar + "'s");
-      }
-      
-      //System.out.println(numReps);
 
+      }
+      
    }
 }
