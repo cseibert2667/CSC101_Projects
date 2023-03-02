@@ -14,6 +14,9 @@ public class project2 {
         String player1 = scnr.next();
         String player2 = scnr.next();
         int numRounds = scnr.nextInt();
+        // other variables
+        int player1Input;
+        int player2Input;
 
         // numRounds must be a positive number
         while (numRounds < 0){
@@ -24,7 +27,16 @@ public class project2 {
         // print player1 vs player2 for x rounds
         System.out.println(player1 + " vs " + player2 + " for " + numRounds + " rounds");
 
+        player1Input = rand.nextInt(3);
+        player2Input = rand.nextInt(3);
         
+
+        while (player1Input == player2Input) {
+            System.out.println("Tie");
+            player1Input = rand.nextInt(3);
+            player2Input = rand.nextInt(3);
+            continue;
+        }
 
         
         // TEST PRINTS
