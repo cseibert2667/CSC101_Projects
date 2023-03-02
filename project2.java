@@ -17,6 +17,8 @@ public class project2 {
         // other variables
         int player1Input;
         int player2Input;
+        int player1wins = 0;
+        int player2wins = 0;
 
         // numRounds must be a positive number
         while (numRounds < 0){
@@ -41,37 +43,45 @@ public class project2 {
             // identify winner
             if (player2Input == SCISSORS && player1Input == PAPER) {
                 System.out.println(player2 + " wins with scissors");
+                player2wins++;
                 player1Input = rand.nextInt(3);
                 player2Input = rand.nextInt(3);
                 //continue;
             } else if (player2Input == ROCK && player1Input == SCISSORS) {
                 System.out.println(player2 + " wins with rock");
+                player2wins++;
                 player1Input = rand.nextInt(3);
                 player2Input = rand.nextInt(3);
                 //continue;
             } else if (player2Input == PAPER && player1Input == ROCK) {
                 System.out.println(player2 + " wins with paper");
+                player2wins++;
                 player1Input = rand.nextInt(3);
                 player2Input = rand.nextInt(3);
                 //continue;
             } else if (player1Input == SCISSORS && player2Input == PAPER) {
                 System.out.println(player1 + " wins with scissors");
+                player1wins++;
                 player1Input = rand.nextInt(3);
                 player2Input = rand.nextInt(3);
                 //continue;
             } else if (player1Input == ROCK && player2Input == SCISSORS) {
                 System.out.println(player1 + " wins with rock");
+                player1wins++;
                 player1Input = rand.nextInt(3);
                 player2Input = rand.nextInt(3);
                 //continue;
             } else if (player1Input == PAPER && player2Input == ROCK) {
                 System.out.println(player1 + " wins with paper");
+                player1wins++;
                 player1Input = rand.nextInt(3);
                 player2Input = rand.nextInt(3);
                 //continue;
             }
 
         }
+
+        System.out.println(player1 + " wins " + player1wins + " and " + player2 + " wins " + player2wins);
         
         
         
