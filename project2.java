@@ -23,7 +23,7 @@ public class project2 {
         int player2wins = 0;
 
         // numRounds must be a positive number
-        while (numRounds < 0){
+        while (numRounds < 0) {
             System.out.println("Rounds must be > 0");
             numRounds = scnr.nextInt();
         }
@@ -37,14 +37,15 @@ public class project2 {
         // loop through for number of rounds
         for (int i = 1; i <= numRounds; i++) {
 
-        // print tie if values the same
-        while (player1Input == player2Input) {
-            System.out.println("Tie");
-            player1Input = rand.nextInt(3);
-            player2Input = rand.nextInt(3);
-        }
+            // print tie if values the same
+            while (player1Input == player2Input) {
+                System.out.println("Tie");
+                player1Input = rand.nextInt(3);
+                player2Input = rand.nextInt(3);
+            }
 
-            // identify winner, increment player wins accordingly, get new random player inputs
+            // identify winner, increment player wins accordingly, get new random player
+            // inputs
             if (player2Input == SCISSORS && player1Input == PAPER) {
                 System.out.println(player2 + " wins with scissors");
                 player2wins++;
@@ -81,13 +82,11 @@ public class project2 {
 
         // print final score
         System.out.println(player1 + " wins " + player1wins + " and " + player2 + " wins " + player2wins);
-        
-        
-        
+
         // TEST PRINTS
         // System.out.println(player1);
         // System.out.println(player2);
         // System.out.println(numRounds);
-        
+
     }
 }
