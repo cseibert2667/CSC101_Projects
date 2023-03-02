@@ -9,8 +9,9 @@ public class sandbox {
          for (int i = 0; i < userString.length(); i++) {
             char currentChar = userString.charAt(i);
             if (!Character.isLetter(currentChar)) {
-               userString = userString.replace(currentChar,'\0');
+               userString = userString.replace(currentChar, '\0');
             }
+            // this works but apparently not for fucking zybooks
             System.out.println(userString);
          }
 
