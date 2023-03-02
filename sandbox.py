@@ -74,6 +74,7 @@ def rows_columns():
             print(str(i + 1) + str(col_letter))
             col_letter = chr(ord(col_letter) + 1)
 
+# counts the number of user chosen characters in a user chosen phrase
 def count_characters():
     user_char = input("Enter a character: ")
     user_string = input("Enter a phrase: ")
@@ -86,4 +87,15 @@ def count_characters():
     else:
         print(str(num_reps) + " " + str(user_char) + "'s")
 
-count_characters()
+# reverses a string and prints it
+def print_backwards():
+    user_str = input("Enter a phrase, or type \"done\" to quit: ")
+    backwards_str = ""
+    while user_str != "done":
+        for i in user_str:
+            # adds first letter, then next letter in front of that, etc
+            # Ex: "hello" -> h -> e + h -> l + eh -> l + leh -> o + lleh -> olleh 
+            backwards_str = i + backwards_str
+        print(backwards_str)
+        user_str = input("Enter a phrase, or type \"done\" to quit: ")
+        backwards_str = ""
