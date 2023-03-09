@@ -31,15 +31,21 @@ public class sandbox {
 
    static void ArraysNStuff() {
       // array declaration w/ 3 elements
-      String[] friends = new String[3];
+      final int x = 3;
+      String[] friends = new String[x];
+
       // define each element
       friends[0] = "Jinx";
       friends[1] = "Dane";
       friends[2] = "Semp";
 
-      for (int i = 0; i < 3; i++)
-      System.out.println(friends[i]);
+      // print each value in array
+      for (int i = 0; i < friends.length; i++){
+         System.out.println(friends[i]);
+      }
+
    }
+
    // execute the function in main
    public static void main(String[] args) {
       ArraysNStuff();
