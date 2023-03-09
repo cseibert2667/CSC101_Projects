@@ -4,7 +4,7 @@ public class sandbox {
 
    // DEFINE a new method (aka function)
    static void backwardString() {
-      
+
       try (Scanner scnr = new Scanner(System.in)) {
          // get input
          String userString = scnr.nextLine();
@@ -29,8 +29,19 @@ public class sandbox {
       }
    }
 
+   static void ArraysNStuff() {
+      // array declaration w/ 3 elements
+      String[] friends = new String[3];
+      // define each element
+      friends[0] = "Jinx";
+      friends[1] = "Dane";
+      friends[2] = "Semp";
+
+      for (int i = 0; i < 3; i++)
+      System.out.println(friends[i]);
+   }
    // execute the function in main
    public static void main(String[] args) {
-      backwardString();
+      ArraysNStuff();
    }
 }
