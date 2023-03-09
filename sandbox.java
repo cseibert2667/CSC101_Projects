@@ -28,8 +28,27 @@ public class sandbox {
          }
       }
    }
+   // function to add a new element to an existing String array
+   // n = number elements in current array
+   // arr[] = current array name
+   // newElement = element to be added
+   public static String[] addToArray(int n, String arr[], String newElement){
+      // create a new array size n+1
+      String newArray[] = new String[n + 1];
 
-   static void ArraysNStuff() {
+      // insert the elements of the old array into the newly created one
+      for (int i = 0; i < n; i++){
+         newArray[i] = arr[i];
+      }
+
+      // insert new element at n+1
+      newArray[n] = newElement;
+
+      // return the new array
+      return newArray;
+   }
+
+   static void arraysNStuff() {
       // array declaration w/ 3 elements
       final int x = 3;
       String[] friends = new String[x];
@@ -44,10 +63,19 @@ public class sandbox {
          System.out.println(friends[i]);
       }
 
+      // call method defined above to add a new element
+      friends = addToArray(x, friends, "Megan");
+
+      System.out.println("New friends:");
+
+      for (int i = 0; i < friends.length; i++){
+         System.out.println(friends[i]);
+      }
+
    }
 
    // execute the function in main
    public static void main(String[] args) {
-      ArraysNStuff();
+      arraysNStuff();
    }
 }
