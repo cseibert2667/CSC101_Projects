@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Arrays;
 
 public class sandbox {
 
@@ -41,7 +42,7 @@ public class sandbox {
          newArray[i] = arr[i];
       }
 
-      // insert new element at n+1
+      // insert new element
       newArray[n] = newElement;
 
       // return the new array
@@ -63,14 +64,20 @@ public class sandbox {
          System.out.println(friends[i]);
       }
 
-      // call method defined above to add a new element
+      // call method defined @ lines 36-50 to add a new element, and assign the returned value to our existing friends array
       friends = addToArray(x, friends, "Megan");
-
+      
       System.out.println("New friends:");
 
+      // print only the new additions to original array
       for (int i = 0; i < friends.length; i++){
-         System.out.println(friends[i]);
+         if (i >= x) {
+            System.out.println(friends[i]);
+         }
       }
+
+      // prints the array in string format ([0,1,2...])
+      // System.out.println(Arrays.toString(friends));
 
    }
 
