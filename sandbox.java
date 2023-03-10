@@ -29,6 +29,7 @@ public class sandbox {
          }
       }
    }
+
    // function to add a new element to an existing String array
    // n = number elements in current array
    // arr[] = current array name
@@ -49,6 +50,29 @@ public class sandbox {
       return newArray;
    }
 
+   // WIP - remove element from an array
+   public static String[] removeFromArray(int n, String arr[], String rmvElement) {
+
+      // new array with length 1 less than original
+      String newArray[] = new String[n - 1];
+
+      int rmvIndex = Arrays.binarySearch(arr, rmvElement) * -1;
+
+      // copy old array into newArray
+      for (int i = 0; i < n; i++){
+         if (i != rmvIndex){
+            newArray[i] = arr[i];
+         }
+         else {
+            break;
+         }
+      }
+      // UNTIL we hit index of rmv index
+      // remaining elements will need to be index - 1
+
+      return newArray;
+   }
+
    static void arraysNStuff() {
       // array declaration w/ 3 elements
       final int x = 3;
@@ -59,29 +83,38 @@ public class sandbox {
       friends[1] = "Dane";
       friends[2] = "Semp";
 
+      System.out.println("Original friends: ");
+
       // print each value in array
       for (int i = 0; i < friends.length; i++){
-         System.out.println(friends[i]);
+         System.out.println("- " + friends[i]);
       }
 
       // call method defined @ lines 36-50 to add a new element, and assign the returned value to our existing friends array
-      friends = addToArray(x, friends, "Megan");
+      friends = addToArray(friends.length, friends, "Megan");
+
+      friends = addToArray(friends.length, friends, "Bonnie");
       
       System.out.println("New friends:");
 
       // print only the new additions to original array
       for (int i = 0; i < friends.length; i++){
          if (i >= x) {
-            System.out.println(friends[i]);
+            System.out.println("- " + friends[i]);
          }
+         
       }
 
       // prints the array in string format ([0,1,2...])
-      // System.out.println(Arrays.toString(friends));
+      System.out.println("All friends: " + Arrays.toString(friends));
 
    }
 
-   // execute the function in main
+   static void moreArrays() {
+      
+   }
+
+   // execute methods in main
    public static void main(String[] args) {
       arraysNStuff();
    }
