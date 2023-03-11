@@ -58,16 +58,24 @@ public class sandbox {
 
       int rmvIndex = Arrays.binarySearch(arr, rmvElement) * -1;
 
+      int i;
+
       // copy old array into newArray
-      for (int i = 0; i < n; i++){
+      for (i = 0; i < n; i++){
+         // UNTIL we hit index of rmv index
          if (i != rmvIndex){
             newArray[i] = arr[i];
          }
          else {
+            while (i < n-1) {
+               newArray[i] = arr[i+1];
+               i++;
+            }
             break;
          }
       }
-      // UNTIL we hit index of rmv index
+
+      // for (i=i; i < n; i++);
       // remaining elements will need to be index - 1
 
       return newArray;
@@ -107,6 +115,10 @@ public class sandbox {
 
       // prints the array in string format ([0,1,2...])
       System.out.println("All friends: " + Arrays.toString(friends));
+
+      friends = removeFromArray(friends.length, friends, "Dane");
+
+      System.out.println(Arrays.toString(friends));
 
    }
 
