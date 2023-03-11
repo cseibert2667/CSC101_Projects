@@ -74,10 +74,7 @@ public class sandbox {
             break;
          }
       }
-
-      // for (i=i; i < n; i++);
-      // remaining elements will need to be index - 1
-
+      
       return newArray;
    }
 
