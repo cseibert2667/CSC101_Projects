@@ -113,6 +113,7 @@ public class sandbox {
       // prints the array in string format ([0,1,2...])
       System.out.println("All friends: " + Arrays.toString(friends));
 
+      // FIX ME: removing "bonnie" removes Dane instead
       friends = removeFromArray(friends.length, friends, "Dane");
 
       System.out.println(Arrays.toString(friends));
