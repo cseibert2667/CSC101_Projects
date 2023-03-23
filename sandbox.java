@@ -148,8 +148,27 @@ public class sandbox {
 
    }
 
+   // prints middle number in a user given array of numbers... number of inputs must be odd tho lol
    static void arraysLab2() {
+      Scanner scnr = new Scanner(System.in);
+      int[] userValues = new int[9]; // Set of data specified by the user
+      int i = 0;
+      int input = scnr.nextInt();
+      boolean tooMany = false;
 
+      while (input >= 0) {
+         if (i == 9) {
+            System.out.println("Too many numbers");
+            tooMany = true;
+            break;
+         }
+         userValues[i] = input;
+         i++;
+         input = scnr.nextInt();
+      }
+      if (!tooMany) {
+         System.out.println("Middle item: " + userValues[i / 2]);
+      }
    }
 
    // execute methods in main
