@@ -34,12 +34,12 @@ public class sandbox {
    // n = number elements in current array
    // arr[] = current array name
    // newElement = element to be added
-   public static String[] addToArray(int n, String arr[], String newElement){
+   public static String[] addToArray(int n, String arr[], String newElement) {
       // create a new array size n+1
       String newArray[] = new String[n + 1];
 
       // insert the elements of the old array into the newly created one
-      for (int i = 0; i < n; i++){
+      for (int i = 0; i < n; i++) {
          newArray[i] = arr[i];
       }
 
@@ -61,20 +61,19 @@ public class sandbox {
       int i;
 
       // copy old array into newArray
-      for (i = 0; i < n; i++){
+      for (i = 0; i < n; i++) {
          // UNTIL we hit index of rmv index
-         if (i != rmvIndex){
+         if (i != rmvIndex) {
             newArray[i] = arr[i];
-         }
-         else {
-            while (i < n-1) {
-               newArray[i] = arr[i+1];
+         } else {
+            while (i < n - 1) {
+               newArray[i] = arr[i + 1];
                i++;
             }
             break;
          }
       }
-      
+
       return newArray;
    }
 
@@ -91,23 +90,24 @@ public class sandbox {
       System.out.println("Original friends: ");
 
       // print each value in array
-      for (int i = 0; i < friends.length; i++){
+      for (int i = 0; i < friends.length; i++) {
          System.out.println("- " + friends[i]);
       }
 
-      // call method defined @ lines 36-50 to add a new element, and assign the returned value to our existing friends array
+      // call method defined @ lines 36-50 to add a new element, and assign the
+      // returned value to our existing friends array
       friends = addToArray(friends.length, friends, "Megan");
 
       friends = addToArray(friends.length, friends, "Bonnie");
-      
+
       System.out.println("New friends:");
 
       // print only the new additions to original array
-      for (int i = 0; i < friends.length; i++){
+      for (int i = 0; i < friends.length; i++) {
          if (i >= x) {
             System.out.println("- " + friends[i]);
          }
-         
+
       }
 
       // prints the array in string format ([0,1,2...])
@@ -120,12 +120,40 @@ public class sandbox {
 
    }
 
-   static void moreArrays() {
-      
+   // reverses a user-inputted array of numbers
+   static void arraysLab1() {
+      Scanner scnr = new Scanner(System.in);
+      int[] userList = new int[20]; // List of numElement integers specified by the user
+      int numElements; // Number of integers in user's list
+      int i;
+      int tempVal;
+
+      numElements = scnr.nextInt(); // Input begins with number of integers that follow
+
+      // get values
+      for (i = 0; i < numElements; i++) {
+         userList[i] = scnr.nextInt();
+      }
+
+      // reverse
+      for (int j = 0; j < numElements / 2; j++) {
+         tempVal = userList[j];
+         userList[j] = userList[numElements - 1 - j];
+         userList[numElements - 1 - j] = tempVal;
+      }
+
+      for (int j = 0; j < numElements; j++) {
+         System.out.print(userList[j] + ",");
+      }
+
+   }
+
+   static void arraysLab2() {
+
    }
 
    // execute methods in main
    public static void main(String[] args) {
-      arraysNStuff();
+      arraysLab2();
    }
 }
