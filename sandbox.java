@@ -184,9 +184,20 @@ public class sandbox {
             userValues[i] = scnr.nextInt();
          }
 
-         
+         // getting max threshold
+         int threshold = scnr.nextInt();
 
-         System.out.println(Arrays.toString(userValues));
+         for (int i = 0; i < numValues; i++) {
+            if (userValues[i] <= threshold) {
+               System.out.print(userValues[i] + ",");
+            }
+         }
+         System.out.println();
+
+
+         // test prints
+         // System.out.println(Arrays.toString(userValues));
+         // System.out.println(threshold);
 
       }
    }
