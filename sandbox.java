@@ -120,7 +120,7 @@ public class sandbox {
 
    }
 
-   // reverses a user-inputted array of numbers
+   // zybook 5.13
    static void arraysLab1() {
       try (Scanner scnr = new Scanner(System.in)) {
          int[] userList = new int[20]; // List of numElement integers specified by the user
@@ -149,8 +149,7 @@ public class sandbox {
 
    }
 
-   // prints middle number in a user given array of numbers... number of inputs
-   // must be odd tho lol
+   // zybook 5.14
    static void arraysLab2() {
       try (Scanner scnr = new Scanner(System.in)) {
          int[] userValues = new int[9]; // Set of data specified by the user
@@ -174,6 +173,7 @@ public class sandbox {
       }
    }
 
+   // zybook 5.15
    static void arraysLab3() {
       try (Scanner scnr = new Scanner(System.in)) {
          int[] userValues = new int[20]; // List of integers from input
