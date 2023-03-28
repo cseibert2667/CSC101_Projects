@@ -202,8 +202,35 @@ public class sandbox {
       }
    }
 
+   // zybook 5.16
+   static void arraysLab4() {
+      try (Scanner scnr = new Scanner(System.in)){
+         double[] userValues = new double[20];
+         int numValues = scnr.nextInt();
+         double maxValue = 0.0;
+
+         // get values
+         for (int i = 0; i < numValues; i++) {
+            userValues[i] = scnr.nextDouble();
+            if (userValues[i] > maxValue) {
+               maxValue = userValues[i];
+            }
+         }
+
+         for (int i = 0; i < numValues; i++) {
+            userValues[i] = userValues[i] / maxValue;
+            System.out.printf("%.2f", userValues[i]);
+            System.out.print(" ");
+         }
+
+         // test prints
+         // System.out.print(maxValue);
+
+      }
+   }
+
    // execute methods in main
    public static void main(String[] args) {
-      arraysLab3();
+      arraysLab4();
    }
 }
