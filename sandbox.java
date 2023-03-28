@@ -229,8 +229,41 @@ public class sandbox {
       }
    }
 
+   // zybook 5.17
+   static void arraysLab5() {
+      try (Scanner scnr = new Scanner(System.in)){
+         String[] userValues = new String[20];
+         int[] reps = new int[20];
+         int numValues = scnr.nextInt();
+
+         for (int i = 0; i < numValues; i++) {
+            userValues[i] = scnr.next();
+         }
+
+         for (int i = 0; i < numValues; i++) {
+            //read value & temporarily store it
+            String tempVal = userValues[i];
+            for (int j = 0; j < numValues; j++) {
+               //if value equals any of other values
+               if (tempVal.equals(userValues[j])){
+                  //+1 corresponding reps value(s)
+                  reps[j]++;
+               }
+            }
+         }
+
+         for (int i = 0; i < numValues; i++) {
+            System.out.println(userValues[i] + " - " + reps[i]);
+         }
+
+         // test prints
+         System.out.println(Arrays.toString(userValues));
+         System.out.println(Arrays.toString(reps));
+      }
+   }
+
    // execute methods in main
    public static void main(String[] args) {
-      arraysLab4();
+      arraysLab5();
    }
 }
