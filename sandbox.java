@@ -122,52 +122,54 @@ public class sandbox {
 
    // reverses a user-inputted array of numbers
    static void arraysLab1() {
-      Scanner scnr = new Scanner(System.in);
-      int[] userList = new int[20]; // List of numElement integers specified by the user
-      int numElements; // Number of integers in user's list
-      int i;
-      int tempVal;
+      try (Scanner scnr = new Scanner(System.in)) {
+         int[] userList = new int[20]; // List of numElement integers specified by the user
+         int numElements; // Number of integers in user's list
+         int i;
+         int tempVal;
 
-      numElements = scnr.nextInt(); // Input begins with number of integers that follow
+         numElements = scnr.nextInt(); // Input begins with number of integers that follow
 
-      // get values
-      for (i = 0; i < numElements; i++) {
-         userList[i] = scnr.nextInt();
-      }
+         // get values
+         for (i = 0; i < numElements; i++) {
+            userList[i] = scnr.nextInt();
+         }
 
-      // reverse
-      for (int j = 0; j < numElements / 2; j++) {
-         tempVal = userList[j];
-         userList[j] = userList[numElements - 1 - j];
-         userList[numElements - 1 - j] = tempVal;
-      }
+         // reverse
+         for (int j = 0; j < numElements / 2; j++) {
+            tempVal = userList[j];
+            userList[j] = userList[numElements - 1 - j];
+            userList[numElements - 1 - j] = tempVal;
+         }
 
-      for (int j = 0; j < numElements; j++) {
-         System.out.print(userList[j] + ",");
+         for (int j = 0; j < numElements; j++) {
+            System.out.print(userList[j] + ",");
+         }
       }
 
    }
 
    // prints middle number in a user given array of numbers... number of inputs must be odd tho lol
    static void arraysLab2() {
-      Scanner scnr = new Scanner(System.in);
-      int[] userValues = new int[9]; // Set of data specified by the user
-      int i = 0;
-      int input = scnr.nextInt();
-      boolean tooMany = false;
+      try (Scanner scnr = new Scanner(System.in)) {
+         int[] userValues = new int[9]; // Set of data specified by the user
+         int i = 0;
+         int input = scnr.nextInt();
+         boolean tooMany = false;
 
-      while (input >= 0) {
-         if (i == 9) {
-            System.out.println("Too many numbers");
-            tooMany = true;
-            break;
+         while (input >= 0) {
+            if (i == 9) {
+               System.out.println("Too many numbers");
+               tooMany = true;
+               break;
+            }
+            userValues[i] = input;
+            i++;
+            input = scnr.nextInt();
          }
-         userValues[i] = input;
-         i++;
-         input = scnr.nextInt();
-      }
-      if (!tooMany) {
-         System.out.println("Middle item: " + userValues[i / 2]);
+         if (!tooMany) {
+            System.out.println("Middle item: " + userValues[i / 2]);
+         }
       }
    }
 
