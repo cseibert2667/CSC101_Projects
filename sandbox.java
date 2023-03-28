@@ -149,7 +149,8 @@ public class sandbox {
 
    }
 
-   // prints middle number in a user given array of numbers... number of inputs must be odd tho lol
+   // prints middle number in a user given array of numbers... number of inputs
+   // must be odd tho lol
    static void arraysLab2() {
       try (Scanner scnr = new Scanner(System.in)) {
          int[] userValues = new int[9]; // Set of data specified by the user
@@ -173,8 +174,25 @@ public class sandbox {
       }
    }
 
+   static void arraysLab3() {
+      try (Scanner scnr = new Scanner(System.in)) {
+         int[] userValues = new int[20]; // List of integers from input
+         int numValues = scnr.nextInt();
+         
+         // assign values to array
+         for (int i = 0; i < numValues; i++) {
+            userValues[i] = scnr.nextInt();
+         }
+
+         
+
+         System.out.println(Arrays.toString(userValues));
+
+      }
+   }
+
    // execute methods in main
    public static void main(String[] args) {
-      arraysLab2();
+      arraysLab3();
    }
 }
