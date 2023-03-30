@@ -16,8 +16,10 @@ public class project3 {
             }
 
             // print roster
+            System.out.println("ROSTER");
             for (int i = 0; i < rating.length; i++) {
-                System.out.println("ROSTER");
+                System.out.println("Player " + (i+1) + " -- Jersey number: " + jerseyNum[i] + ", Rating: " + rating[i]);
+
             }
         }
     }
