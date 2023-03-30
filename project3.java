@@ -61,7 +61,18 @@ public class project3 {
                     continue;
                 }
                 if (menuOption == 'r') { // replace player
-                    
+                    System.out.println("Enter a jersey number:");
+                    int replace = scnr.nextInt();
+                    for (int i = 0; i < jerseyNum.length; i++) {
+                        if (jerseyNum[i] == replace) {
+                            System.out.println("Enter a new jersey number:");
+                            jerseyNum[i] = scnr.nextInt();
+                            System.out.println("Enter a rating for the new player:");
+                            rating[i] = scnr.nextInt();
+                        }
+                    }
+                    System.out.println();
+                    continue;
                 }
                 if (menuOption == 'o') { // output roster
                     System.out.println("ROSTER");
