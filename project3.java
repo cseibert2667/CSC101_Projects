@@ -6,6 +6,7 @@ public class project3 {
         try (Scanner scnr = new Scanner(System.in)){
             int[] jerseyNum = new int[5];
             int[] rating = new int[5];
+            char menuOption;
 
             // get inputs
             for (int i = 0; i < jerseyNum.length; i++) {
@@ -19,8 +20,21 @@ public class project3 {
             System.out.println("ROSTER");
             for (int i = 0; i < rating.length; i++) {
                 System.out.println("Player " + (i+1) + " -- Jersey number: " + jerseyNum[i] + ", Rating: " + rating[i]);
-
             }
+
+            // menu
+            do {
+                System.out.println("MENU");
+                System.out.println("u - Update player rating");
+                System.out.println("a - Output players above a rating");
+                System.out.println("r - Replace player");
+                System.out.println("o - Output roster");
+                System.out.println("q - Quit");
+                System.out.println();
+                System.out.println("Choose an option: ");
+                menuOption = scnr.next().charAt(0);
+            }
+            while (menuOption != 'q');
         }
     }
 }
