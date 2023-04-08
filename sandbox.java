@@ -261,15 +261,30 @@ public class sandbox {
       }
    }
 
+   // zybook 5.18
+   static void arraysLab6() {
+      try (Scanner scnr = new Scanner(System.in)) {
+         String[] userValues = new String[20];
+         int numValues = scnr.nextInt();
+
+         for (int i = 0; i < numValues; i++) {
+            userValues[i] = scnr.next();
+         }
+
+         char userChar = scnr.next().charAt(0);
+
+         for (int i = 0; i < numValues; i++) {
+            if (userValues[i].indexOf(userChar) != -1) {
+               System.out.print(userValues[i] + ", ");
+            }
+         }
+
+         System.out.println();
+      }
+   }
+
    // execute methods in main
    public static void main(String[] args) {
-      int[] yearsList = {4,7,3,0,8};
-
-      for (int i = 0; i < 4; ++i) {
-
-         yearsList[i] = yearsList[i + 1];
-
+      arraysLab6();
    }
-   System.out.println(Arrays.toString(yearsList));
-}
 }
