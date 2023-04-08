@@ -178,7 +178,7 @@ public class sandbox {
       try (Scanner scnr = new Scanner(System.in)) {
          int[] userValues = new int[20]; // List of integers from input
          int numValues = scnr.nextInt();
-         
+
          // assign values to array
          for (int i = 0; i < numValues; i++) {
             userValues[i] = scnr.nextInt();
@@ -194,7 +194,6 @@ public class sandbox {
          }
          System.out.println();
 
-
          // test prints
          // System.out.println(Arrays.toString(userValues));
          // System.out.println(threshold);
@@ -204,7 +203,7 @@ public class sandbox {
 
    // zybook 5.16
    static void arraysLab4() {
-      try (Scanner scnr = new Scanner(System.in)){
+      try (Scanner scnr = new Scanner(System.in)) {
          double[] userValues = new double[20];
          int numValues = scnr.nextInt();
          double maxValue = 0.0;
@@ -231,7 +230,7 @@ public class sandbox {
 
    // zybook 5.17
    static void arraysLab5() {
-      try (Scanner scnr = new Scanner(System.in)){
+      try (Scanner scnr = new Scanner(System.in)) {
          String[] userValues = new String[20];
          int[] reps = new int[20];
          int numValues = scnr.nextInt();
@@ -241,12 +240,12 @@ public class sandbox {
          }
 
          for (int i = 0; i < numValues; i++) {
-            //read value & temporarily store it
+            // read value & temporarily store it
             String tempVal = userValues[i];
             for (int j = 0; j < numValues; j++) {
-               //if value equals any of other values
-               if (tempVal.equals(userValues[j])){
-                  //+1 corresponding reps value(s)
+               // if value equals any of other values
+               if (tempVal.equals(userValues[j])) {
+                  // +1 corresponding reps value(s)
                   reps[j]++;
                }
             }
@@ -264,6 +263,13 @@ public class sandbox {
 
    // execute methods in main
    public static void main(String[] args) {
-      arraysLab5();
+      int[] yearsList = {4,7,3,0,8};
+
+      for (int i = 0; i < 4; ++i) {
+
+         yearsList[i] = yearsList[i + 1];
+
    }
+   System.out.println(Arrays.toString(yearsList));
+}
 }
