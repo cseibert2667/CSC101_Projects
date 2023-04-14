@@ -23,6 +23,7 @@ public class project3 {
                         .println("Player " + (i + 1) + " -- Jersey number: " + jerseyNum[i] + ", Rating: " + rating[i]);
             }
             System.out.println();
+            
             // menu
             do {
                 System.out.println("MENU");
@@ -33,7 +34,9 @@ public class project3 {
                 System.out.println("q - Quit");
                 System.out.println();
                 System.out.println("Choose an option:");
+
                 menuOption = scnr.next().charAt(0);
+
                 if (menuOption == 'u') { // update player rating
                     System.out.println("Enter a jersey number:");
                     int update = scnr.nextInt();
