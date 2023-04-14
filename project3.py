@@ -15,15 +15,32 @@ for i in range(5):
 print('\n')
 
 # PRINT MENU
-print(
-    "MENU\n" +
-    "u - Update player rating\n"
-    "a - Output players above a rating\n"
-    "r - Replace player\n"
-    "o - Output roster\n"
-    "q - Quit\n"
-    "Choose an option: "
-    menuOption = input("Choose an option: ")
-)
+def print_menu():
+    print(
+        "MENU\n" +
+        "u - Update player rating\n" +
+        "a - Output players above a rating\n" +
+        "r - Replace player\n" +
+        "o - Output roster\n" +
+        "q - Quit\n" )
 
 # MENU CHOICES
+print_menu()
+menu_option = input("Choose an option: ")
+while menu_option != 'q':
+    if menu_option == 'u':
+        print("FIXME: UPDATE RATING")
+        print_menu()
+        menu_option = input("Choose an option: ")
+    elif menu_option == 'a':
+        print("FIXME: OUTPUT >> RATING")
+        print_menu()
+        menu_option = input("Choose an option: ")
+    elif menu_option == 'r':
+        print("FIXME: REPLACE")
+        print_menu()
+        menu_option = input("Choose an option: ")
+    elif menu_option == 'o':
+        print("FIXME: PRINT ROSTER")
+        print_menu()
+        menu_option = input("Choose an option: ")
