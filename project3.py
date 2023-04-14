@@ -10,7 +10,6 @@ print('\n')
 # PRINT ROSTER
 print("ROSTER")
 for i in range(5):
-    # print("hi" + jersey_num[i])
     print("Player " + (str(i + 1)) + " -- Jersey number: " + (str(jersey_num[i])) + ", Rating: " + (str(rating[i])))
 print('\n')
 
@@ -28,19 +27,30 @@ def print_menu():
 print_menu()
 menu_option = input("Choose an option: ")
 while menu_option != 'q':
-    if menu_option == 'u':
-        print("FIXME: UPDATE RATING")
+
+    if menu_option == 'u': # update rating
+        to_update = input("Enter a jersey number: ")
+        for i in range(len(jersey_num)):
+            if to_update == jersey_num[i]:
+                rating[i] = input("Enter new rating: ")
+        print("Player rating updated successfully.\n")
         print_menu()
         menu_option = input("Choose an option: ")
-    elif menu_option == 'a':
+
+    elif menu_option == 'a': # output players above given rating
         print("FIXME: OUTPUT >> RATING")
         print_menu()
         menu_option = input("Choose an option: ")
-    elif menu_option == 'r':
+
+    elif menu_option == 'r': # replace a player
         print("FIXME: REPLACE")
         print_menu()
         menu_option = input("Choose an option: ")
-    elif menu_option == 'o':
-        print("FIXME: PRINT ROSTER")
+
+    elif menu_option == 'o': # print the roster
+        print("ROSTER")
+        for i in range(5):
+            print("Player " + (str(i + 1)) + " -- Jersey number: " + (str(jersey_num[i])) + ", Rating: " + (str(rating[i])))
+        print('\n')
         print_menu()
         menu_option = input("Choose an option: ")
