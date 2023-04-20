@@ -3,6 +3,7 @@ package ch7Labs.lab2;
 public class Car {
     private int modelYear; 
     // TODO: Declare purchasePrice field (int)
+    private int purchasePrice;
  
     private int currentValue;
     
@@ -15,9 +16,14 @@ public class Car {
     }
     
     // TODO: Define setPurchasePrice() method
+    public void setPurchasePrice(int userPrice){
+        purchasePrice = userPrice;
+    }
     
     // TODO: Define getPurchasePrice() method
-    
+    public int getPurchasePrice() {
+        return purchasePrice;
+    }
     
     public void calcCurrentValue(int currentYear) {
        double depreciationRate = 0.15;
@@ -29,5 +35,11 @@ public class Car {
     }
     
     // TODO: Define printInfo() method to output modelYear, purchasePrice, and currentValue
+    public void printInfo(){
+        System.out.println("Car's infortmation:");
+        System.out.println("Model year: " + this.getModelYear());
+        System.out.println("Purchase price: " + this.getPurchasePrice());
+        System.out.println("Current value: " + currentValue);
+    }
     
  }
