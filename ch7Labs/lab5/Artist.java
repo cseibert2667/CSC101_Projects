@@ -20,9 +20,27 @@ public class Artist {
         deathYear = death;
     }
 
-    // TODO: Define get methods: getName(), getBirthYear(), getDeathYear()
+    // get methods
+    public String getName(){
+        return artistName;
+    }
+    public int getBirthYear(){
+        return birthYear;
+    }
+    public int getDeathYear(){
+        return deathYear;
+    }
 
-    // TODO: Define printInfo() method
-    // If deathYear is entered as -1, only print birthYear
-
+    // print method
+    public void printInfo(){
+        if (deathYear < 0) {
+            System.out.println("Artist: " + getName() + " (" + getBirthYear() + " to present)");
+        }
+        else if (birthYear < 0 && deathYear < 0) {
+            System.out.println("Artist: " + getName() + " (unknown)");
+        }
+        else {
+            System.out.println("Artist: " + getName() + " (" + getBirthYear() + " to " + getDeathYear() + ")");
+        }
+    }
 }
