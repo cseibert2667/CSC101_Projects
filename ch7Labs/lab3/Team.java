@@ -32,17 +32,17 @@ public class Team {
         return losses;
     }
 
-    public double getWinPercentage(double wins, double losses) {
-        return wins / (wins + losses);
+    public double getWinPercentage() {
+        return (double) wins / ((double) wins + (double) losses);
     }
 
     // print method
     public void printStanding() {
-        System.out.printf("Win percentage: %.2f \n", getWinPercentage(wins, losses));
-        if (getWinPercentage(wins, losses) >= 0.5) {
+        System.out.printf("Win percentage: %.2f \n", getWinPercentage());
+        if (getWinPercentage() >= 0.5) {
             System.out.println("Congratulations, Team " + name + " has a winning average!");
         } else {
-            System.out.println(name + " has a losing average.");
+            System.out.println("Team" + name + " has a losing average.");
         }
     }
 
