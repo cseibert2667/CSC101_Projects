@@ -1,12 +1,23 @@
-// import java.util.Scanner;
-
 public class test {
-    public static int addGrade(int[] allGrades, int grade, int listSize) {
-        return grade;
+    public static void swapValues(int x, int y) {
 
-    }
-
-    public static void main(String[] args) {
-
-    }
+        int tmp;
+     
+        tmp = x;
+     
+        x = y;
+     
+        y = tmp;
+     
+     }  
+     
+     public static void main(String args[]) {
+     
+        int p = 4, q = 3;
+     
+        swapValues(p, q);
+     
+        System.out.print("p = " + p + ", q = " + q);
+     
+     }
 }
