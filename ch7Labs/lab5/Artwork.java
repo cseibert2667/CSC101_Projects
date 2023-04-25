@@ -7,28 +7,29 @@ public class Artwork {
     private Artist artist;
 
     // default constructor
-    public Artwork(){
+    public Artwork() {
         title = "unknown";
         yearCreated = -1;
     }
 
     // get methods
-    public String getTitle(){
+    public String getTitle() {
         return title;
     }
-    public int getYearCreated(){
+
+    public int getYearCreated() {
         return yearCreated;
     }
 
     // second constructor to initialize private fields
-    public Artwork(String title, int yearCreated, Artist artist){
+    public Artwork(String title, int yearCreated, Artist artist) {
         this.title = title;
         this.yearCreated = yearCreated;
         this.artist = artist;
     }
 
     // print method
-    public void printInfo(){
+    public void printInfo() {
         artist.printInfo();
         System.out.println("Title: " + getTitle() + ", " + getYearCreated());
     }

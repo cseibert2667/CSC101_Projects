@@ -7,39 +7,39 @@ public class Artist {
     private int deathYear;
 
     // default constructor
-    public Artist(){
+    public Artist() {
         artistName = "unknown";
         birthYear = -1;
         deathYear = -1;
     }
 
     // second constructor to initialize private fields
-    public Artist(String name, int birth, int death){
+    public Artist(String name, int birth, int death) {
         artistName = name;
         birthYear = birth;
         deathYear = death;
     }
 
     // get methods
-    public String getName(){
+    public String getName() {
         return artistName;
     }
-    public int getBirthYear(){
+
+    public int getBirthYear() {
         return birthYear;
     }
-    public int getDeathYear(){
+
+    public int getDeathYear() {
         return deathYear;
     }
 
     // print method
-    public void printInfo(){
+    public void printInfo() {
         if (birthYear < 0 && deathYear < 0) {
             System.out.println("Artist: " + getName() + " (unknown)");
-        }
-        else if (deathYear < 0) {
+        } else if (deathYear < 0) {
             System.out.println("Artist: " + getName() + " (" + getBirthYear() + " to present)");
-        }
-        else {
+        } else {
             System.out.println("Artist: " + getName() + " (" + getBirthYear() + " to " + getDeathYear() + ")");
         }
     }
