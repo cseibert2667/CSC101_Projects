@@ -1,12 +1,24 @@
 package ch7Labs.lab5;
 
 public class Artist {
-    // TODO: Declare private fields - artistName, birthYear, deathYear
+    // private fields
+    private String artistName;
+    private int birthYear;
+    private int deathYear;
 
-    // TODO: Define default constructor
+    // default constructor
+    public Artist(){
+        artistName = "unknown";
+        birthYear = -1;
+        deathYear = -1;
+    }
 
-    // TODO: Define second constructor to initialize
-    // private fields (artistName, birthYear, deathYear)
+    // second constructor to initialize private fields
+    public Artist(String name, int birth, int death){
+        artistName = name;
+        birthYear = birth;
+        deathYear = death;
+    }
 
     // TODO: Define get methods: getName(), getBirthYear(), getDeathYear()
 
