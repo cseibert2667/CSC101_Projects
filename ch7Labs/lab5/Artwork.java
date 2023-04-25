@@ -1,18 +1,36 @@
 package ch7Labs.lab5;
 
 public class Artwork {
-    // TODO: Declare private fields - title, yearCreated
+    // private fields
+    private String title;
+    private int yearCreated;
+    private Artist artist;
 
-    // TODO: Declare private field artist of type Artist
+    // default constructor
+    public Artwork(){
+        title = "unknown";
+        yearCreated = -1;
+    }
 
-    // TODO: Define default constructor
+    // get methods
+    public String getTitle(){
+        return title;
+    }
+    public int getYearCreated(){
+        return yearCreated;
+    }
 
-    // TODO: Define get methods: getTitle(), getYearCreated()
+    // second constructor to initialize private fields
+    public Artwork(String title, int yearCreated, Artist artist){
+        this.title = title;
+        this.yearCreated = yearCreated;
+        this.artist = artist;
+    }
 
-    // TODO: Define second constructor to initialize
-    // private fields (title, yearCreated, artist)
-
-    // TODO: Define printInfo() method
-    // Call the printInfo() method in Artist.java to print an artist's information
+    // print method
+    public void printInfo(){
+        artist.printInfo();
+        System.out.println("Title: " + getTitle() + ", " + getYearCreated());
+    }
 
 }
