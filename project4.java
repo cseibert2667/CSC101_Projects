@@ -70,9 +70,13 @@ public class project4 {
 
     // Calculate tax due and check for negative withheld
     public static int calcTaxDue(int tax, int withheld) {
-        /* Complete the method and update the return statement */
+        if (withheld < 0){
+            withheld = 0;
+        }
 
-        return -1;
+        int taxDue = tax - withheld;
+
+        return taxDue;
     }
 
     public static void main(String[] args) {
@@ -86,6 +90,7 @@ public class project4 {
             int deduction;
             int taxable;
             int tax;
+            int taxDue;
 
             // Step #1: Input information
             wages = scnr.nextInt();
@@ -103,6 +108,8 @@ public class project4 {
             System.out.printf("Taxable income: $%,d\n", taxable);
             tax = calcTax(status, taxable);
             System.out.printf("Federal tax: $%,d\n", tax);
+            taxDue = calcTaxDue(tax, withheld);
+            System.out.printf("Tax due: $%,d\n", taxDue);
 
         }
 
