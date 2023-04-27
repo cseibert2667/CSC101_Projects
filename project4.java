@@ -4,9 +4,9 @@ public class project4 {
 
     // Calculate AGI and repair any negative values
     public static int calcAGI(int wages, int interest, int unemployment) {
-        /* Complete the method and update the return statement */
+        int agi = Math.abs(wages) + Math.abs(interest) + Math.abs(unemployment);
 
-        return -1;
+        return agi;
     }
 
     // Calculate deduction depending on single, dependent or married
@@ -38,19 +38,25 @@ public class project4 {
     }
 
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-        int wages = 0;
-        int interest = 0;
-        int unemployment = 0;
-        int status = -1;
-        int withheld = 0;
-        int agi;
+        try (Scanner scnr = new Scanner(System.in)) {
+            int wages = 0;
+            int interest = 0;
+            int unemployment = 0;
+            int status = -1;
+            int withheld = 0;
+            int agi;
 
-        // Step #1: Input information
+            // Step #1: Input information
+            wages = scnr.nextInt();
+            interest = scnr.nextInt();
+            unemployment = scnr.nextInt();
+            status = scnr.nextInt();
+            withheld = scnr.nextInt();
 
-        // Step #2: Calculate AGI
-        agi = calcAGI(wages, interest, unemployment);
-        System.out.printf("AGI: $%,d\n", agi);
+            // Step #2: Calculate AGI
+            agi = calcAGI(wages, interest, unemployment);
+            System.out.printf("AGI: $%,d\n", agi);
+        }
 
     }
 }
