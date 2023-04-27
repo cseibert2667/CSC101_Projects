@@ -25,9 +25,13 @@ public class project4 {
 
     // Calculate taxable but not allow negative results
     public static int calcTaxable(int agi, int deduction) {
-        /* Complete the method and update the return statement */
+        int taxable = agi - deduction;
 
-        return -1;
+        if (taxable < 0) {
+            taxable = 0;
+        }
+
+        return taxable;
     }
 
     // Calculate tax for single or dependent
@@ -53,6 +57,7 @@ public class project4 {
             int withheld = 0;
             int agi;
             int deduction;
+            int taxable;
 
             // Step #1: Input information
             wages = scnr.nextInt();
@@ -66,6 +71,9 @@ public class project4 {
             System.out.printf("AGI: $%,d\n", agi);
             deduction = getDeduction(status);
             System.out.printf("Deduction: $%,d\n", deduction);
+            taxable = calcTaxable(agi, deduction);
+            System.out.printf("Taxable income: $%,d\n", taxable);
+
         }
 
     }
