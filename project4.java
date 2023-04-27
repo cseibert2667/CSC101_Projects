@@ -15,8 +15,7 @@ public class project4 {
 
         if (status == 1) {
             deduction = 12000;
-        }
-        else if (status == 2) {
+        } else if (status == 2) {
             deduction = 24000;
         }
 
@@ -36,9 +35,37 @@ public class project4 {
 
     // Calculate tax for single or dependent
     public static int calcTax(int status, int taxable) {
-        /* Complete the method and update the return statement */
+        double tax;
 
-        return -1;
+        if (status == 0 || status == 1){
+            if (taxable <= 10000){
+                tax = (double)taxable * .1;
+            }
+            else if (taxable > 10000 && taxable <= 40000){
+                tax = 1000 + (((double)taxable - 10000) * .12 );
+            }
+            else if (taxable > 40000 && taxable <= 85000){
+                tax = 4600 + (((double)taxable - 40000) * .22);
+            }
+            else {
+                tax = 14500 + (((double)taxable - 85000) * .24);
+            }
+        }
+        else {
+            if (taxable <= 20000){
+                tax = (double)taxable * .1;
+            }
+            else if (taxable > 20000 && taxable <= 80000){
+                tax = 2000 + (((double)taxable - 20000) * .12 );
+            }
+            else {
+                tax = 9200 + (((double)taxable - 80000) * .22 );
+            }
+        }
+
+        tax = Math.round(tax);
+
+        return (int)tax;
     }
 
     // Calculate tax due and check for negative withheld
@@ -58,6 +85,7 @@ public class project4 {
             int agi;
             int deduction;
             int taxable;
+            int tax;
 
             // Step #1: Input information
             wages = scnr.nextInt();
@@ -73,6 +101,8 @@ public class project4 {
             System.out.printf("Deduction: $%,d\n", deduction);
             taxable = calcTaxable(agi, deduction);
             System.out.printf("Taxable income: $%,d\n", taxable);
+            tax = calcTax(status, taxable);
+            System.out.printf("Federal tax: $%,d\n", tax);
 
         }
 
