@@ -11,9 +11,16 @@ public class project4 {
 
     // Calculate deduction depending on single, dependent or married
     public static int getDeduction(int status) {
-        /* Complete the method and update the return statement */
+        int deduction = 6000;
 
-        return -1;
+        if (status == 1) {
+            deduction = 12000;
+        }
+        else if (status == 2) {
+            deduction = 24000;
+        }
+
+        return deduction;
     }
 
     // Calculate taxable but not allow negative results
@@ -45,6 +52,7 @@ public class project4 {
             int status = -1;
             int withheld = 0;
             int agi;
+            int deduction;
 
             // Step #1: Input information
             wages = scnr.nextInt();
@@ -56,6 +64,8 @@ public class project4 {
             // Step #2: Calculate AGI
             agi = calcAGI(wages, interest, unemployment);
             System.out.printf("AGI: $%,d\n", agi);
+            deduction = getDeduction(status);
+            System.out.printf("Deduction: $%,d\n", deduction);
         }
 
     }
